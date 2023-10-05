@@ -1,46 +1,194 @@
-<table border="1" width="100%">
-    <tr>
-      <td valign="top">
-        <ul>
-          <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-          <li><a href="/Kanbas/Dashboard/screen.html">Dashboard</a></li>
-          <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-          <li><a href="#">Calendar</a></li>
-          <li><a href="#">Inbox</a></li>
-          <li><a href="#">History</a></li>
-          <li><a href="#">Studio</a></li>
-          <li><a href="#">Commons</a></li>
-          <li><a href="#">Help</a></li>
-        </ul>
-      </td>
-      <td valign="top">
-        <ul>
-            <li><a href="/Kanbas/Courses/Home/screen.html">Notification</a></li>
-            <li><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
-            <li><a href="#">Files</a></li>
-            <li><a href="/Kanbas/Courses/Settings/courseDetails.html">Settings</a></li>
-            <li><a href="#">ePortfolios</a></li>
-            <li><a href="#">Shared content</a></li>
-            <li><a href="#">The Hub</a></li>
-            <li><a href="#">Qwickly Course tools</a></li>
-            <li><a href="#">Global Announcements</a></li>
-        </ul>
-      </td>
-      <td valign="top" > Jose's Profile
-        <a href="/Kanbas/Account/Profile/EditProfile/edit.html">
-            <button>Edit Profile</button>
+<html>
+
+<head>
+  <script src="https://kit.fontawesome.com/fd7b97609e.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../index.css" />
+  <style>
+    .kanbas-navigation {
+      margin: 0;
+      padding: 0;
+      width: 85px;
+      background-color: black;
+      list-style: none;
+      height: 100%;
+    }
+
+    .kanbas-navigation li {
+      padding: 10px 5px 10px 5px;
+      font-size: 0.8em;
+      text-align: center;
+    }
+
+    .kanbas-navigation .active {
+      background-color: white;
+    }
+
+    .kanbas-navigation .active a {
+      color: red;
+    }
+
+    .kanbas-navigation a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .kanbas-navigation a i {
+      color: red;
+      font-size: 2em;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .account-navigation {
+      margin: 0 0 0 25px;
+      list-style: none;
+      padding: 0px;
+      width: 200px;
+    }
+
+    .account-navigation li {
+      padding: 5px 0 5px 10px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+
+    .account-navigation li.active {
+      border-left: 2px solid black;
+    }
+
+    .account-navigation li.active a {
+      color: black;
+    }
+
+    .account-navigation a {
+      color: red;
+      text-decoration: none;
+    }
+
+
+    a {
+      text-decoration: none;
+      color: red;
+    }
+
+    .root {
+      display: flex;
+      min-height: 100%;
+    }
+
+    .content {
+      flex-grow: 1;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .content h2 {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .divider {
+      border-bottom: 1px solid #ccc;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="root">
+    <div style="min-height: 100%;">
+      <ul class="kanbas-navigation">
+        <li class="active"><a href="/kanbas/account/">
+            <i class="fa-regular fa-user" style="color: #CCCCCC"></i>
+            <div>Account</div>
+          </a></li>
+        <li>
+          <a href="/kanbas/dashboard">
+            <i class="fa fa-tachometer"></i>
+            <div style="font-size:.9em">Dashboard</div>
           </a>
-        
-        <h4>Contact</h4> 
-        <p>No registration services, you can add some on the <a href="#">setting</a> page</p> 
+        </li>
+        <li><a href="/kanbas/course/">
+            <i class="fa-solid fa-book"></i>
+            <div>Courses</div>
+          </a></li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-calendar"></i>
+            <div>Calendar</div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-inbox"></i>
+            <div>Inbox</div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <div>History</div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-clapperboard"></i>
+            <div>Studio</div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-share-from-square"></i>
+            <div>Commons</div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-question"></i>
+            <div>Help</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <ul class="account-navigation">
+        <li><a href="#">Notifications</a></li>
+        <li class="active"><a href="/kanbas/account/profile/">Profile</a></li>
+        <li><a href="#">Files</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">ePortfolios</a></li>
+        <li><a href="#">Shared Content</a></li>
+        <li><a href="#">The Hub</a></li>
+        <li><a href="#">Qwickly Course Tools</a></li>
+        <li><a href="#">Global Announcements</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="divider">
+        <p>Wenqing Wu's Profile</p>
+      </div>
+      <div style="display: flex;
+            margin-top: 20px;
+            justify-content: space-between;
+            ">
+        <div>
+          <i class="fa fa-user fa-5x" style="color: grey;"></i>
+          <h2>Wenqing Wu</h2>
+        </div>
+        <a href="EditProfile/edit.html"> <button class="btn btn-secondary"> <i class="fas fa-pencil"></i> Edit
+            Profile</button></a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>No registered services, you can add some on the <a href="">settings</a> page</p>
+        <h3>Biography</h3>
+        <p>NEU Student, Software Engineer at Salesforce and Splunk</p>
+        <h3>Links</h3>
+        <p><a href="https://www.youtube.com/@WebDevTV">Youtube</a></p>
+      </div>
+    </div>
+  </div>
+</body>
 
-        <h4>Biography</h4> 
-        <p>Faculty</p> 
-
-        <h4>Links</h4> 
-        <p><a href="#">YouTube</a></p> 
-
-      </td>
-    </tr>
-  </table>
-
+</html>
