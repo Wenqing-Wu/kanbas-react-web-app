@@ -8,7 +8,7 @@ function KanbasNavigation() {
   const links = ["Account", "Dashboard", "Courses", "Calendar"];
 
   const linkToIconMap = {
-    Account: <BiUserCircle className="wd-icon" />,
+    Account: <BiUserCircle className="wd-icon wd-account-icon" />,
     Dashboard: <RiDashboard3Fill className="wd-icon" />,
     Courses: <FaBook className="wd-icon" />,
     Calendar: <BsFillCalendar2WeekFill className="wd-icon" />,
@@ -16,7 +16,7 @@ function KanbasNavigation() {
 
   const { pathname } = useLocation();
   return (
-    <div className="list-group wd-kanbas-navigation" style={{ width: 150 }}>
+    <div className="list-group wd-kanbas-navigation" style={{ width: 100, height: "100%"}}>
       {links.map((link, index) => (
         <Link
           key={index}
@@ -25,7 +25,10 @@ function KanbasNavigation() {
         >
           {linkToIconMap[link]}
           <br/>
-          {link}
+          <div className="wd-kanbas-navigation-words">
+            {link}
+          </div>
+          
         </Link>
       ))}
     </div>

@@ -3,15 +3,20 @@ import { Link } from "react-router-dom";
 function Dashboard() {
   const courses = db.courses;
   return (
-    <div>
+    <div className="ms-3">
       <h1>Dashboard</h1>
       <hr />
       <h2>Published Courses ({courses.length})</h2>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div className="col">
-          {courses.map((course, index) => (
-            <div class="card h-100">
-              <img src="/images/react.png" class="card-img-top" alt="..." />
+      <div class="d-flex flex-row flex-wrap ">
+        {courses.map((course, index) => (
+          <div className="px-4 py-4">
+            <div class="card" style={{ width: "280px" }}>
+              <img
+                src="logo192.png"
+                class="card-img-top"
+                alt="..."
+                style={{ height: "200px" }}
+              />
               <div class="card-body">
                 <h5 class="card-title">{course.name}</h5>
 
@@ -29,8 +34,8 @@ function Dashboard() {
                 </p>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

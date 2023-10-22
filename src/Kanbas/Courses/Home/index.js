@@ -1,16 +1,13 @@
-import ModuleList from "../Modules/ModuleList";
-
+import Modules from "../Modules/";
+import HomeStatus from "./HomeStatus";
 
 function Home() {
   return (
-    <div className="row">
-        <div className="col-10">
-            <h2>Home</h2>
-            <ModuleList />
-        </div>
-        <div className="col-2">
-            <h2>Status</h2>
-        </div>
+    <div className="my-2 mx-2" style={{ display: "flex" }}>
+      <div style={{ flex: 1 }}>
+        <Modules />
+      </div>
+      <HomeStatus />
     </div>
   );
 }
