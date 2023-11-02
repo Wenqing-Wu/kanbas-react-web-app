@@ -1,21 +1,18 @@
-import ArrowFunctions from './ArrowFunctions';
-import ES5Functions from './ES5Functions';
-import ImpliesReturns from './ImpliesReturns';
-import FunctionParenthesisAndParameters from './FunctionParenthesisAndParameters';
-import WorkingWithArrays from './WorkingWithArrays';
-import ArrayIndexAndLength from './ArrayIndexAndLength';
-import AddingAndRemovingDataToFromArrays from './AddingAndRemovingDataToFromArrays';
-import ForLoops from './ForLoops';
+import ES5Functions from "./ES5Functions";
+import ArrowFunctions from "./ArrowFunctions";
+import ImpliedReturn from "./ImpliedReturn";
+import FunctionParenthesisAndParameters from "./FunctionParenthesisAndParameters";
+function WorkingWithFunctions (){
 
-function WorkingWithFunctions() {
-    return (
+    return(
+
         <div>
-            <h1>JavaScript</h1>
-            <ES5Functions />
-            <ArrowFunctions />
-            <ImpliesReturns />
-            <FunctionParenthesisAndParameters />
+            <ES5Functions/>
+            <ArrowFunctions/>
+            <ImpliedReturn/>
+            <FunctionParenthesisAndParameters/>
         </div>
+        
     );
-};
-export default WorkingWithFunctions;
+}
+export default WorkingWithFunctions

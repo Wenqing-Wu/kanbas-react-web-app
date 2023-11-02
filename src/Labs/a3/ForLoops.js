@@ -1,18 +1,22 @@
-function ForLoops() {
+function ForLoops(){
     let stringArray1 = ['string1', 'string3'];
     let stringArray2 = [];
-    for (let i = 0; i < stringArray1.length; i++) {
-        const string1 = stringArray1[i];
-        stringArray2.push(
-            string1.toUpperCase());
+    for (let i = 0;
+         i < stringArray1.length;
+         i++) {
+      const string1 = stringArray1[i];
+      stringArray2.push(
+        string1.toUpperCase());
     }
-    return (
+    return(
         <>
-            <h3>ForLoops</h3>
-            stringArray1 = {stringArray1} <br />
-            stringArray2 = {stringArray2} <br />
+        
+        <h3>
+            Looping Through arrays
+        </h3>
+        stringArray2 = {stringArray2} 
         </>
-    )
+    );
 }
 
 export default ForLoops
