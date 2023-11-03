@@ -1,4 +1,3 @@
-import JavaScript from "./JavaScript";
 import PathParameters from "./PathParameters";
 import Classes from "./Classes";
 import Styles from "./Styles";
@@ -6,6 +5,8 @@ import ConditionalOutput from "./ConditionalOutput";
 import TodoItem from "./todo/TodoItem";
 import TodoList from "./todo/TodoList";
 import { useSelector } from "react-redux";
+// import JavaScript from "./Javascript";
+
 function Assignment3() {
   const { todos } = useSelector((state) => state.todosReducer);
   return (
@@ -24,7 +25,7 @@ function Assignment3() {
       <ConditionalOutput />
       <Styles />
       <Classes />
-      <JavaScript />
+      {/* <JavaScript /> */}
       <PathParameters />
     </div>
   );
