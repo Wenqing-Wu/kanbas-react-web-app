@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, useLocation } from "react-router-dom";
 
 import { FaBars, FaGlasses } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function CourseName({ course }) {
   const { courseId } = useParams();
@@ -28,7 +28,10 @@ function CourseName({ course }) {
           >
             <ol className="breadcrumb pt-3">
               <li className="breadcrumb-item">
-                <Link to={`/Kanbas/Courses/${course._id}`} className="text-danger text-decoration-none">
+                <Link
+                  to={`/Kanbas/Courses/${course._id}`}
+                  className="text-danger text-decoration-none"
+                >
                   {course.name}
                 </Link>
               </li>

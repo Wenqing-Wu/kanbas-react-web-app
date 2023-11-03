@@ -4,10 +4,10 @@ import GradesUpperButtons from "./GradesUpperButtons";
 function Grades() {
   const { courseId } = useParams();
   const assignments = db.assignments.filter(
-    (assignment) => assignment.course === courseId
+    (assignment) => assignment.course === courseId,
   );
   const enrollments = db.enrollments.filter(
-    (enrollment) => enrollment.course === courseId
+    (enrollment) => enrollment.course === courseId,
   );
   return (
     <div className="my-2 mx-2">
@@ -25,7 +25,7 @@ function Grades() {
           <tbody>
             {enrollments.map((enrollment) => {
               const user = db.users.find(
-                (user) => user._id === enrollment.user
+                (user) => user._id === enrollment.user,
               );
               return (
                 <tr>
@@ -36,7 +36,7 @@ function Grades() {
                     const grade = db.grades.find(
                       (grade) =>
                         grade.student === enrollment.user &&
-                        grade.assignment === assignment._id
+                        grade.assignment === assignment._id,
                     );
                     return <td>{grade?.grade || ""}</td>;
                   })}

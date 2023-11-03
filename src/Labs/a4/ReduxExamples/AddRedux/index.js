@@ -34,4 +34,3 @@ function AddRedux() {
   );
 }
 export default AddRedux;
-

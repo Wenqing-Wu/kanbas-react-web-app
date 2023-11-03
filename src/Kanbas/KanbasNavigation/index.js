@@ -17,29 +17,23 @@ function KanbasNavigation() {
   const { pathname } = useLocation();
   return (
     <div>
-    <div className="list-group wd-kanbas-navigation " style={{ width: 100, position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: 0,}}>
-      {links.map((link, index) => (
-        <Link
-          key={index}
-          to={`/Kanbas/${link}`}
-          className={`list-group-item ${pathname.includes(link) && "active"}`}
-        >
-          {linkToIconMap[link]}
-          <br/>
-          <div className="wd-kanbas-navigation-words">
-            {link}
-          </div>
-          
-        </Link>
-      ))}
-    </div>
-    <div style={{width:100}}>
-
-    </div>
-
+      <div
+        className="list-group wd-kanbas-navigation "
+        style={{ width: 100, position: "absolute", top: 0, bottom: 0, left: 0 }}
+      >
+        {links.map((link, index) => (
+          <Link
+            key={index}
+            to={`/Kanbas/${link}`}
+            className={`list-group-item ${pathname.includes(link) && "active"}`}
+          >
+            {linkToIconMap[link]}
+            <br />
+            <div className="wd-kanbas-navigation-words">{link}</div>
+          </Link>
+        ))}
+      </div>
+      <div style={{ width: 100 }}></div>
     </div>
   );
 }

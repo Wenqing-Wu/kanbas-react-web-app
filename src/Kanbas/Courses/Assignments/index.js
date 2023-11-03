@@ -9,15 +9,21 @@ import { deleteAssignment, setAssignment } from "./assignmentsReducer";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignment = useSelector((state) => state.assignmentsReducer.assignment);
-  const assignments = useSelector((state) => state.assignmentsReducer.assignments);
+  const assignment = useSelector(
+    (state) => state.assignmentsReducer.assignment,
+  );
+  const assignments = useSelector(
+    (state) => state.assignmentsReducer.assignments,
+  );
   const dispatch = useDispatch();
   const courseAssignments = assignments.filter(
-    (assignment) => assignment.course === courseId
+    (assignment) => assignment.course === courseId,
   );
 
   const handleDeleteClick = (assignment) => {
-    const isConfirmed = window.confirm("Are you sure you want to remove this assignment?");
+    const isConfirmed = window.confirm(
+      "Are you sure you want to remove this assignment?",
+    );
     if (isConfirmed) {
       dispatch(deleteAssignment(assignment._id));
     }
@@ -45,22 +51,24 @@ function Assignments() {
                 key={Assignment._id}
                 to={`/Kanbas/Courses/${courseId}/Assignments/Edit/${Assignment._id}`}
                 className="ms-2 mt-auto assignment-link"
-                onClick={() => { dispatch(setAssignment(Assignment)) }}
+                onClick={() => {
+                  dispatch(setAssignment(Assignment));
+                }}
               >
                 {Assignment.title}
               </Link>
               <br />
-              <p className="ms-2 mb-0 pb-0" style={{ fontSize: 14, }}>
-                Due: {Assignment.dueDate.replace("T", " ")} | ~/{Assignment.points} pts
+              <p className="ms-2 mb-0 pb-0" style={{ fontSize: 14 }}>
+                Due: {Assignment.dueDate.replace("T", " ")} | ~/
+                {Assignment.points} pts
               </p>
-              
             </div>
-            <button 
-            className="btn btn-danger"
-            onClick={() => handleDeleteClick(Assignment)}>
-                Delete
-              </button>
-
+            <button
+              className="btn btn-danger"
+              onClick={() => handleDeleteClick(Assignment)}
+            >
+              Delete
+            </button>
           </div>
         ))}
       </div>

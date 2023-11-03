@@ -1,5 +1,5 @@
 import VariablesAndConstants from "./VariablesAndConstants";
-import VariableTypes from "./VariableTypes.js"
+import VariableTypes from "./VariableTypes.js";
 import BooleanVariable from "./BooleanVariables";
 import IfElse from "./IfElse";
 import TernaryOperator from "./TernaryOperator";
@@ -12,24 +12,24 @@ import Destructing from "./Destructing";
 import FunctionDestructing from "./FunctionDestructing";
 
 function JavaScript() {
-    console.log('Hello World!');
+  console.log("Hello World!");
 
-    return(
-       <div>
-          <h1>JavaScript</h1>
-          <VariablesAndConstants/>
-          <VariableTypes/>
-          <BooleanVariable/>
-          <IfElse/>
-          <TernaryOperator/>
-          <WorkingWithFunctions/>
-          <WorkingWithArrays/>
-          <TemplateLiterals/>
-          <House/>
-          <Spread/>
-          <Destructing/>
-          <FunctionDestructing/>
-       </div>
-    );
- }
- export default JavaScript
+  return (
+    <div>
+      <h1>JavaScript</h1>
+      <VariablesAndConstants />
+      <VariableTypes />
+      <BooleanVariable />
+      <IfElse />
+      <TernaryOperator />
+      <WorkingWithFunctions />
+      <WorkingWithArrays />
+      <TemplateLiterals />
+      <House />
+      <Spread />
+      <Destructing />
+      <FunctionDestructing />
+    </div>
+  );
+}
+export default JavaScript;

@@ -1,4 +1,3 @@
-
 import { Navigate, Route, Routes, useParams } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
@@ -14,7 +13,7 @@ function Courses({ courses }) {
   const course = courses.find((course) => course._id === courseId);
   return (
     <div>
-      <CourseName course={course}/>
+      <CourseName course={course} />
       <div>
         <CourseNavigation />
         <div>
@@ -36,7 +35,8 @@ function Courses({ courses }) {
               />
               <Route
                 path="Assignments/Creator"
-                element={<AssignmentCreator />} />
+                element={<AssignmentCreator />}
+              />
               <Route path="Grades" element={<Grades />} />
             </Routes>
           </div>

@@ -10,5 +10,5 @@ export default {
   assignments,
   users,
   enrollments,
-  grades
+  grades,
 };
